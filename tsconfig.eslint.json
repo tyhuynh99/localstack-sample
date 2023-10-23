@@ -1,0 +1,16 @@
+{
+    "extends": "./tsconfig.json",
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.js",
+        "global-types/**/*",
+        "**/*.js",
+        "**/*.ts",
+        "infra/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*",
+        "cdk.out"
+    ]
+}
