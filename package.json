@@ -8,7 +8,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "start-localstack": "sh ./script/start-localstack.sh",
+    "deploy-cdk": "sh ./script/deploy-cdk.sh"
   },
   "devDependencies": {
     "@types/jest": "^29.5.5",

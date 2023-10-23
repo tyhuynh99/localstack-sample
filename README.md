@@ -1,19 +1,45 @@
-# Welcome to your CDK TypeScript project
+# Welcome to sample CDK TypeScript project
 
-This is a blank project for CDK development with TypeScript.
+This is a project for CDK development with TypeScript. This project is will be used for practicing CDK locally
+deployment by using LocalStack.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+**LocalStack** is a cloud service emulator that runs in a single container on your laptop or in your CI environment.
+With LocalStack, you can run your AWS applications or Lambdas entirely on your local machine without connecting to a
+remote cloud provider!
 
-## Useful commands
+|                | Version |
+|----------------|---------|
+| aws-cli-local  | 2.13.13 |
+| localstack-cli | 2.3.2   |
+| cdk-local      | 2.102.0 |
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+## Install aws-cli-local
+You can install `aws` by using the following command if it’s not already installed.
 
-## How to compose docker of LocalStack
-```
-docker compose -f localstack-compose.yml up
-```
+````
+pip3 install awscli-local
+````
+
+## Start LocalStack
+You can start LocalStack with Docker Compose by using a `docker-localstack.yml` configuration file.
+
+You can compose docker file by running following command
+````
+npm run start-localstack
+````
+
+## Install cdk-local
+
+The `cdklocal` command line is published as an npm library
+
+````
+npm install -g aws-cdk-local aws-cdk
+````
+
+## Deploy CDK
+
+Run the following command to deploy cdk after starting LocalStack
+
+````
+npm run deploy-cdk
+````
